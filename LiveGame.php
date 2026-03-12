@@ -1,4 +1,7 @@
 <?php
+
+// Игра "Жизнь" на PHP
+
 error_reporting(E_ALL);
 header('Cache-Control: no-cache, no-store, must-revalidate');
 header('Expires: ' . gmdate("D, d M Y H:i:s") . ' GMT');
@@ -86,5 +89,6 @@ header('Content-Type: image/png');
 
 $c2 = gzdeflate($c2, 1);
 file_put_contents('c.txt', $c2);
+
 
 imagepng($imb, NULL, 1);
